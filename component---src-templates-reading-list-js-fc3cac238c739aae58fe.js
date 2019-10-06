@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{283:function(e,n,a){"use strict";a.r(n),a.d(n,"default",(function(){return d})),a.d(n,"pageQuery",(function(){return c}));var t=a(0),r=a.n(t),i=a(280);function d(e){var n=e.data.markdownRemark.html;return r.a.createElement(i.a,{title:"My Reading List",path:"/reading/"},r.a.createElement("div",{className:"reading-list-container markdown"},r.a.createElement("div",{dangerouslySetInnerHTML:{__html:n}})))}var c="29486469"}}]);
+//# sourceMappingURL=component---src-templates-reading-list-js-fc3cac238c739aae58fe.js.map
