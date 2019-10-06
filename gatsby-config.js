@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Wen Zhu's Personal Website`,
+    description: `Wen Zhu's personal website, a curation of his blogs, projects, ideas, etc.`,
+    author: `@coderwz`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,8 +27,42 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-files`,
+        path: `${__dirname}/src/markdown`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              // Class prefix for <pre> tags containing syntax highlighting;
+              // defaults to 'language-' (eg <pre class="language-js">).
+              // If your site loads Prism into the browser at runtime,
+              // (eg for use with libraries like react-live),
+              // you may use this to prevent Prism from re-processing syntax.
+              // This is an uncommon use-case though;
+              // If you're unsure, it's best to use the default value.
+              classPrefix: "language-",
+            },
+          },
+          `gatsby-remark-emoji`,  // <-- this line adds emoji
+        ],
+      },
+    },
+    `gatsby-plugin-less`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Roboto']
+        }
+      }
+    }
   ],
 }

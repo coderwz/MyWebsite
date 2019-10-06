@@ -4,4 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
+import './src/components/base.less';
+import './src/components/highlight.css';
+import './src/components/markdown.less';
