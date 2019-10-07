@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "my-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "My personal website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Wen Zhu",
   "dependencies": {
     "@material-ui/core": "^4.4.3",
     "gatsby": "^2.15.29",
@@ -33,7 +33,7 @@
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "gatsby"
+    "blog", "personal website"
   ],
   "license": "MIT",
   "scripts": {
@@ -43,13 +43,10 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "rm -rf .cache && rm -rf public && gatsby build && gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/coderwz/coderwz.github.io"
   }
 }
