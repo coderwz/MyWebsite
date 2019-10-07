@@ -1,6 +1,7 @@
 import React from 'react';
 import BlogIndexCard from '../components/blog-index-card';
 import Layout from '../components/layout';
+import { graphql } from 'gatsby';
 
 const BlogIndexPage = ({
     data: {

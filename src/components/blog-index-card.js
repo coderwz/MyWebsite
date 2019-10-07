@@ -30,9 +30,9 @@ const useStyles = makeStyles({
 
 const BlogIndexCard = ({ post }) => {
     const classes = useStyles();
-    return <Card className={classes.card}>
-        <CardContent>
-            <Link to={post.frontmatter.path}>
+    return <Link to={post.frontmatter.path}>
+        <Card className={classes.card}>
+            <CardContent>
                 <Typography className={classes.title} color="textPrimary" gutterBottom>
                     {post.frontmatter.title}
                 </Typography>
@@ -42,9 +42,9 @@ const BlogIndexCard = ({ post }) => {
                 <Typography className={classes.more} variant="caption">
                     Learn More...
                 </Typography>
-            </Link>
-        </CardContent>
-    </Card>;
+            </CardContent>
+        </Card>
+    </Link>;
 };
 
 export default BlogIndexCard;
